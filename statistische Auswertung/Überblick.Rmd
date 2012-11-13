@@ -1,0 +1,6 @@
+Überblick
+========================================================
+
+* Gleichverteilung bei einer Zufallsvariablen
+* Normalverteilung bei Aufsummierung von mehreren unabhängigen Zufallsvariablen
+* andere Verteilung bei Aufsummierung von abhängigen Variablen

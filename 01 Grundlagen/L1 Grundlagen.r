@@ -3,8 +3,8 @@
 
 # Beachten Sie: Alles hinter einem "#" wird als Kommentar gewertet und bei der
 # Ausführung in der Console ignoriert. RStudio färbt diese Kommentare entsprechend
-# ein. Zwischen den Kommentaren stehen die Befehle, die Sie ausführen sollen, um
-# zu lernen, wie diese arbeiten. Immer wieder bekommen Sie auch eine kurze Aufgabe
+# ein. Zwischen den Kommentaren stehen die Befehle, die Sie ausführen sollen. So 
+# lernen Sie um, wie diese arbeiten. Immer wieder bekommen Sie auch eine kurze Aufgabe
 # gestellt und müssen dann einen Befehl selber schreiben.
 
 # Bitte führen Sie jeden dargestellten Befehl auch aus. Erstens, damit Sie sehen
@@ -40,9 +40,9 @@ print("Test")
 
 # 1.  Wählen Sie die folgende Befehlszeile aus. 
 
-# 2.  Drücken Sie <Befehl>+<Enter>
-
 print("dieser Befehl wurde direkt in die Console geschickt")
+
+# 2.  Drücken Sie <Befehl>+<Enter>
 
 # Der Befehl wird sofort in die Konsole geschickt und ausgeführt
 
@@ -88,16 +88,17 @@ print("dieser Befehl wurde direkt in die Console geschickt")
 
 A <- 12
 
-# 2.  Führen Sie den folgenden Befehl aus, um den Wert der Variablen abzufragen:
+# 2.  Führen Sie den folgenden Befehl aus, um den Wert der Variablen in der Console
+#     anzuzeigen:
 
 A
 
-# In der Konsole wird der Wert der Variablen angezeigt. Was die 1 in eckigen Klammern
-# vor dem eigentlichen Wert zu bedeuten hat, soll an späterer Stelle erklärt werden.
+# Was die 1 in eckigen Klammern vor dem eigentlichen Wert zu bedeuten hat, soll 
+# an späterer Stelle erklärt werden.
 
 # 3.  Aufgabe: Weisen Sie der Variable "B" den Wert "18" zu.
 
-  # Löschen Sie diese beiden Zeilen (mit dem "#") und fügen Sie ihre Berechnung ein.
+  # Löschen Sie diese beiden Zeilen (mit dem "#") und fügen Sie Ihren Befehl ein.
   # Testen Sie Ihre Berechnung in der Console.
 
 # 4.  Falls Sie damit erfolgreich waren, führen Sie den folgenden Befehl aus:
@@ -112,10 +113,14 @@ A + B
 
 C <- A + B
 
-# Hier wird nichts zurückgegeben, ausser es taucht ein Fehler auf.
+# Hier wird nichts zurückgegeben, außer es taucht ein Fehler auf.
+
+# 6.  Lassen Sie den Wert von Varibale C in der Console anzeigen
+
+  # Diese Zeile durch Ihren Befehl ersetzen
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#                      Lektion 1.4: Einfache Rechenoperationen
+#                      Lektion 1.4: Einige Rechenoperationen
 
 # 1. Probieren Sie die folgenden Befehle aus:
 
@@ -172,7 +177,7 @@ floor(12.7)   # Abrunden
   # Diese Zeile durch Ihre Berechnung ersetzen
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#                      Lektion 1.6: Auf einzelne Elemente zugreifen
+#                      Lektion 1.6: Auf einzelne Elemente eines Array zugreifen
 
 # 1.  So greifen Sie auf das 3. Element im Array D zu:
 
@@ -182,7 +187,7 @@ floor(12.7)   # Abrunden
 
   D[c(1,2)]
   D[2:4]
-  D[-1]         # Alle Elemente außer dem ersten (in diesem Falle wie D[2:4])
+  D[-1]         # Alle Elemente außer dem ersten (entspricht in diesem Falle D[2:4])
   D[c(1,1,1,1)]
   D[c(2,2:4)]
   tail(D, 1)    # letztes Element von D
@@ -193,7 +198,7 @@ floor(12.7)   # Abrunden
 
 # 3.  Den Befehl "cumsum()" aus Lektion 1.4 könnten Sie auf folgende Weise nachbilden:
 
-  c( D[1], sum( D[c(1,2)] ), sum( D[c(1:3)] ), sum( D[c(1:4)] ) )
+  c( D[1], sum( D[1:2] ), sum( D[1:3] ), sum( D[1:4] ) )
 
 # 4.  Aufgabe: Bilden Sie den Befehl "sum()" nach, indem Sie den Operator "+" 
 #     verwenden (Addieren Sie die 4 Elemente des Arrays D):
@@ -202,7 +207,7 @@ floor(12.7)   # Abrunden
 
 # 5.  Die Länge eines Arrays ermitteln:
 
-length(D)
+  length(D)
 
 # 6.  Aufgabe: Wie greifen Sie unter Verwendung von "length()" auf das letzte 
 # Element eines Arrays zu?
@@ -211,7 +216,7 @@ length(D)
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#                      Lektion 1.7: Erweitertes Erzeugen von Arrays
+#                      Lektion 1.7: Andere Arten Arrays zu erzeugen
 
 # 1.  Arrays erzeugen mit ":"
 
@@ -247,15 +252,15 @@ length(D)
 # das ein oder andere merken können. Damit Sie die wichtigsten Befehle später schnell 
 # nachschlagen können, werden wir nun alle Befehle, die Sie in dieser Lektion ausge-
 # führt haben in eine Datei Speichern. Dies ist dann sozusagen ihr Spickzettel,
-# den Sie verwenden können, wenn Sie später das Gelernte anwenden möchten.
+# den Sie verwenden können, wenn Sie später das Gelernte wiederholen möchten.
 
   savehistory( "Grundlagen/Spickzettel Lektion 1.r" )
 
-# Ich würde vorschlagen, dass Sie die Datei "Spickzettel Lektion 1.r" im Ordner 
-# "Grundlagen" öffnen und sich zu jedem gelisteten Befehl einen Kommentar 
-# schreiben. Einfach das "#"-Zeichen einfügen und dahinter den Kommentar schreiben. 
-# Das haben Sie ja jetzt schon öfter gesehen. Eventuell können Sie auch einige 
+# Ich würde vorschlagen, dass Sie die Datei "Spickzettel Lektion 1.r", die Sie mit 
+# diesem Befehl im Ordner "01 Grundlagen" gespeichert haben, öffnen und sich zu jedem 
+# gelisteten Befehl einen Kommentar schreiben. Einfach das "#"-Zeichen einfügen 
+# und dahinter den Kommentar schreiben. Eventuell können Sie auch einige 
 # Befehle herauslöschen. 
 
-# Damit haben Sie nun alles noch einmal wiederholt und können gleichzeitig schnell 
-# wieder nachschlagen, was Sie in dieser Lektion gelernt haben.
+# Wenn Sie direkt mit der nächsten Lektion fortfahren möchten, sollten Sie im 
+# History-Fenster auf "Clear all history entries" klicken (Besen-Symbol).
